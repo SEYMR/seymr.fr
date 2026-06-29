@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.seymr.fr/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.seymr.fr/og-image.jpg</image:loc>
+      <image:title>SEYMR® - Maison de Haute Facture</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#collection</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#maison</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#algorithm</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-algorithm-human.webp</image:loc>
+      <image:title>Algorithm Human - 1/1 - Polygon ERC-721</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#acquisition</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#collection?filter=mobilier</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-sisit-1.webp</image:loc>
+      <image:title>Fauteuil SISIT - Édition 22</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-paravent-1.webp</image:loc>
+      <image:title>Paravent Sculptural - Édition 44</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-tapis-1.webp</image:loc>
+      <image:title>Tapis d'Art NEXUS - Édition 44</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-assise-1.webp</image:loc>
+      <image:title>Assise Basse - Édition 44</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#collection?filter=tirage</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-soie-1.webp</image:loc>
+      <image:title>Tirage sur Soie - Édition 50</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-papier-1.webp</image:loc>
+      <image:title>Tirage Papier Grand Format - Édition 50</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#collection?filter=maroquinerie</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-sac-1.webp</image:loc>
+      <image:title>Sac Conqueror - Édition 44</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-pochette-1.webp</image:loc>
+      <image:title>Pochette Portfolio - Édition 100</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.seymr.fr/#collection?filter=edition</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.seymr.fr/seymr-manifeste-1.webp</image:loc>
+      <image:title>Manifeste Collector - Édition 500</image:title>
+    </image:image>
+  </url>
+</urlset>

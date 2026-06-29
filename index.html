@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0C0B09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; media-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; base-uri 'self'; object-src 'none'; form-action 'self' https://buy.stripe.com">
+
+<title>SEYMR® · Maison de Haute Facture</title>
+<meta name="description" content="SEYMR®, Maison de Haute Facture. Éditions numérotées faites main à Londres, transposées d'encres originales sur papier Arches. Soie, cuir, blockchain. Saint-Barthélemy, Karukera.">
+<meta name="author" content="SEYMR® · L. Jean">
+<link rel="canonical" href="https://www.seymr.fr/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.seymr.fr/">
+<meta property="og:title" content="SEYMR® · Maison de Haute Facture">
+<meta property="og:description" content="Éditions numérotées faites main à Londres, transposées d'encres originales. Algorithm Human, 1/1, certifié Polygon.">
+<meta property="og:image" content="https://www.seymr.fr/og-image.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SEYMR®">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ═══ SEYMR® · NOIR CHAUD · IVOIRE · OR ═══
+   Titres : Bodoni Moda   Corps : Cormorant Garamond   Données : JetBrains Mono
+   Pour changer la police des titres, modifie --display ci-dessous.
+   Alternatives prêtes : 'Fraunces', 'Cormorant Garamond', 'Italiana'. */
+:root{
+  --display:'Bodoni Moda', Georgia, serif;
+  --body:'Cormorant Garamond', Georgia, serif;
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease2:cubic-bezier(.19,1,.22,1);
+  --maxw:1320px;
+}
+[data-theme="dark"]{
+  --bg:#0C0B09; --bg-2:#100E0B; --surface:#16130E; --surface-h:#1E1A13;
+  --fg:#ECE6D9; --fg-2:#9D9686; --fg-3:#5C564B;
+  --or:#C9A84C; --or-soft:#E2CB8A; --or-deep:#A8862F;
+  --hair:rgba(236,230,217,.085); --hair-or:rgba(201,168,76,.22);
+  --blanc:#FAF8F3; --noir:#0C0B09; --shade:rgba(8,7,5,.74);
+}
+[data-theme="light"]{
+  --bg:#FAF8F3; --bg-2:#F1ECE1; --surface:#FFFFFF; --surface-h:#F6F1E7;
+  --fg:#14110B; --fg-2:#4A453B; --fg-3:#8C8576;
+  --or:#A8862F; --or-soft:#8A6E1E; --or-deep:#6E561A;
+  --hair:rgba(20,17,11,.11); --hair-or:rgba(168,134,47,.32);
+  --blanc:#FAF8F3; --noir:#0C0B09; --shade:rgba(250,248,243,.72);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;border-radius:0;}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem;-webkit-text-size-adjust:100%;}
+body{font-family:var(--body);background:var(--bg);color:var(--fg);font-size:clamp(16px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;transition:background .6s var(--ease),color .6s var(--ease);}
+body.lock{overflow:hidden;}
+img,video{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{border-radius:0;font-family:inherit;}
+::selection{background:var(--or);color:var(--noir);}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px;}
+body::after{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;opacity:.04;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px;}
+.fr,.en{display:none;}
+[data-lang="fr"] .fr{display:inline;}
+[data-lang="en"] .en{display:inline;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.4rem,5vw,4.5rem);}
+.eyebrow{font-family:var(--mono);font-size:clamp(.56rem,.5vw+.3rem,.72rem);letter-spacing:.34em;text-transform:uppercase;color:var(--or);display:inline-block;}
+
+#ld{position:fixed;inset:0;z-index:9999;background:var(--noir);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;transition:opacity 1s var(--ease),visibility 1s;}
+#ld.gone{opacity:0;visibility:hidden;pointer-events:none;}
+.ld-b{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,9vw,5rem);letter-spacing:.3em;text-indent:.3em;color:var(--blanc);opacity:0;transform:translateY(16px);animation:fu 1.3s var(--ease) .25s forwards;}
+.ld-b sup{font-size:.26em;color:var(--or);}
+.ld-l{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent);animation:lg 1.7s var(--ease2) .7s forwards;}
+.ld-s{font-family:var(--mono);font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:#6a665d;opacity:0;animation:fu 1s var(--ease) 1.2s forwards;}
+@keyframes fu{to{opacity:1;transform:translateY(0);}}
+@keyframes lg{to{width:min(220px,44vw);}}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:64px;display:flex;align-items:center;background:transparent;border-bottom:1px solid transparent;transition:background .5s var(--ease),border-color .5s,backdrop-filter .5s;}
+.nav.s{background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);border-bottom-color:var(--hair);}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.nav-b{font-family:var(--display);font-weight:700;font-size:1.2rem;letter-spacing:.24em;color:var(--fg);}
+.nav-b sup{font-size:.4em;color:var(--or);}
+.nav-links{display:flex;align-items:center;gap:clamp(1.2rem,2.6vw,2.6rem);}
+.nav-links a{font-family:var(--mono);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-2);position:relative;padding:.4rem 0;transition:color .3s;}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--or);transition:width .4s var(--ease);}
+.nav-links a:hover{color:var(--fg);}
+.nav-links a:hover::after{width:100%;}
+.nav-r{display:flex;align-items:center;gap:.5rem;}
+.ico{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:none;border:1px solid var(--hair);color:var(--fg-2);font-family:var(--mono);font-size:.58rem;cursor:pointer;transition:all .3s;}
+.ico:hover{border-color:var(--or);color:var(--or);}
+.burger{display:none;flex-direction:column;gap:5px;width:38px;height:38px;align-items:center;justify-content:center;background:none;border:1px solid var(--hair);cursor:pointer;}
+.burger span{width:18px;height:1px;background:var(--fg);transition:all .35s var(--ease);}
+.burger.o span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.burger.o span:nth-child(2){opacity:0;}
+.burger.o span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.drawer{position:fixed;inset:0;z-index:880;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .45s var(--ease);}
+.drawer.o{opacity:1;pointer-events:all;}
+.drawer a{font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,7vw,2.8rem);letter-spacing:.04em;color:var(--fg);}
+.drawer a:hover{color:var(--or);}
+
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-media{position:absolute;inset:0;z-index:0;background:var(--noir);overflow:hidden;}
+.hero-media img.hero-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(100%) contrast(1.05) brightness(.6);transition:opacity .8s ease;z-index:1;}
+.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(100%) contrast(1.05) brightness(.6);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:2;}
+.hero-media::after{content:'';position:absolute;inset:0;z-index:3;background:linear-gradient(to bottom,var(--shade) 0%,transparent 26%,transparent 52%,var(--bg) 100%);}
+.hero-c{position:relative;z-index:4;width:100%;padding-bottom:clamp(3.5rem,9vh,7rem);}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(3.6rem,15vw,12rem);line-height:.84;letter-spacing:.005em;color:var(--blanc);}
+.hero h1 sup{font-size:.16em;color:var(--or);vertical-align:super;}
+.hero-sub{font-family:var(--display);font-weight:400;font-size:clamp(1.05rem,1.5vw+.4rem,1.7rem);letter-spacing:.14em;text-transform:uppercase;color:var(--or-soft);margin-top:1.1rem;}
+.hero-meta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem 2.4rem;}
+.hero-meta span{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:#d3cdbf;}
+.hero-meta b{color:var(--or);font-weight:500;}
+.hero-cta{margin-top:2.4rem;display:inline-flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--blanc);border:1px solid rgba(250,248,243,.32);padding:1rem 2rem;transition:all .4s var(--ease);cursor:pointer;}
+.hero-cta:hover{background:var(--or);border-color:var(--or);color:var(--noir);}
+
+.freq{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);overflow:hidden;background:var(--bg-2);}
+.freq-t{display:flex;align-items:center;gap:3rem;padding:1rem 0;white-space:nowrap;animation:scrollx 36s linear infinite;width:max-content;}
+.freq-t span{font-family:var(--mono);font-size:.64rem;letter-spacing:.32em;text-transform:uppercase;color:var(--fg-3);}
+.freq-t b{color:var(--or);font-weight:500;}
+.freq-t i{width:5px;height:5px;background:var(--or);transform:rotate(45deg);opacity:.7;}
+@keyframes scrollx{to{transform:translateX(-50%);}}
+
+section{padding:clamp(4.5rem,9vw,8.5rem) 0;}
+.sec-head{margin-bottom:clamp(3.4rem,6vw,5.4rem);}
+.sec-title{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,6vw,5.4rem);line-height:1;letter-spacing:.004em;color:var(--fg);margin-top:1rem;}
+.sec-intro{font-family:var(--body);font-size:clamp(1.02rem,.7vw+.6rem,1.24rem);color:var(--fg-2);max-width:560px;margin-top:1.6rem;}
+
+.filt{display:flex;gap:1.6rem;margin-top:2.2rem;border-bottom:1px solid var(--hair);padding-bottom:1rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.filt::-webkit-scrollbar{display:none;}
+@media(min-width:680px){.filt{flex-wrap:wrap;overflow-x:visible;}}
+.filt button{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);background:none;border:none;cursor:pointer;padding-bottom:.6rem;margin-bottom:-1px;border-bottom:1px solid transparent;transition:all .3s;white-space:nowrap;flex-shrink:0;}
+.filt button.a,.filt button:hover{color:var(--or);border-bottom-color:var(--or);}
+
+/*/* GRILLE · visuels agrandis */
+.grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:3.2rem;}
+@media(min-width:680px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(3,1fr);}}
+.card{background:var(--bg);position:relative;cursor:pointer;display:flex;flex-direction:column;transition:background .45s var(--ease);overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--or),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:4;}
+.card:hover{background:var(--surface);}
+.card:hover::before{transform:scaleX(1);}
+.card-frame{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--noir);}
+@media(min-width:680px){.card-frame{aspect-ratio:4/5;}}
+.card-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:2rem;text-align:center;background:repeating-linear-gradient(46deg,#15120d 0 14px,#100d09 14px 28px);}
+.card-fallback span{font-family:var(--display);font-weight:600;font-size:clamp(1.2rem,2.4vw,1.6rem);color:#3c382e;letter-spacing:.04em;}
+.card-frame img{position:relative;z-index:2;width:100%;height:100%;object-fit:cover;filter:grayscale(6%) contrast(1.03);transition:transform 1.1s var(--ease),opacity .6s;}
+.card:hover .card-frame img{transform:scale(1.05);}
+.card-count{position:absolute;top:1rem;right:1rem;z-index:5;font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;color:var(--blanc);background:var(--shade);backdrop-filter:blur(6px);padding:.34rem .6rem;border:1px solid rgba(250,248,243,.2);}
+.card-ed{position:absolute;top:1rem;left:1rem;z-index:5;display:flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--or);background:var(--shade);backdrop-filter:blur(6px);padding:.34rem .62rem;border:1px solid var(--hair-or);}
+.card-ed i{width:5px;height:5px;border-radius:50%;background:var(--or);box-shadow:0 0 8px var(--or);}
+.card-view{position:absolute;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:center;justify-content:center;gap:.6rem;padding:1.1rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--blanc);background:linear-gradient(to top,var(--shade),transparent);opacity:0;transform:translateY(8px);transition:all .4s var(--ease);}
+.card:hover .card-view{opacity:1;transform:translateY(0);}
+@media(hover:none){.card-view{opacity:1;transform:none;}}
+.card-body{padding:clamp(1.4rem,2.2vw,1.9rem);display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;border-top:1px solid var(--hair);}
+.card-cat{font-family:var(--mono);font-size:.54rem;letter-spacing:.24em;text-transform:uppercase;color:var(--fg-3);margin-bottom:.5rem;}
+.card-nm{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,1.5vw+.5rem,1.7rem);line-height:1.05;color:var(--fg);}
+.card-pr{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,1.2vw+.4rem,1.45rem);color:var(--or);white-space:nowrap;}
+
+/* VISIONNEUSE */
+.viewer{position:fixed;inset:0;z-index:1000;background:var(--bg);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s;display:flex;flex-direction:column;}
+.viewer.o{opacity:1;visibility:visible;}
+.viewer-top{flex-shrink:0;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.2rem,4vw,2.6rem);border-bottom:1px solid var(--hair);}
+.viewer-brand{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:.22em;color:var(--fg);}
+.viewer-brand sup{font-size:.42em;color:var(--or);}
+.viewer-x{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:none;border:1px solid var(--hair);color:var(--fg-2);font-size:1rem;cursor:pointer;transition:all .3s;}
+.viewer-x:hover{border-color:var(--or);color:var(--or);}
+.viewer-grid{flex:1;display:flex;flex-direction:column;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+@media(min-width:900px){.viewer-grid{display:grid;grid-template-columns:1.4fr 1fr;overflow:hidden;}}
+.vg{position:relative;background:var(--noir);display:flex;flex-direction:column;flex-shrink:0;}
+@media(min-width:900px){.vg{min-height:0;height:100%;flex-shrink:1;}}
+.vg-main{position:relative;overflow:hidden;background:var(--noir);height:62vh;height:62svh;}
+@media(min-width:900px){.vg-main{flex:1;height:auto;}}
+.vg-track{display:flex;height:100%;transition:transform .55s var(--ease);}
+.vg-slide{position:relative;min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.vg-slide .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(42deg,#15120d 0 16px,#0f0c08 16px 32px);}
+.vg-slide .fb span{font-family:var(--display);font-weight:600;font-size:1.5rem;color:#3a362c;letter-spacing:.06em;text-align:center;padding:2rem;}
+.vg-slide img{position:relative;z-index:2;width:100%;height:100%;object-fit:contain;}
+.vg-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:var(--shade);backdrop-filter:blur(8px);border:1px solid var(--hair);color:var(--blanc);font-size:1.05rem;cursor:pointer;transition:all .3s;}
+.vg-arr:hover{background:var(--or);border-color:var(--or);color:var(--noir);}
+.vg-arr.prev{left:1rem;} .vg-arr.next{right:1rem;}
+.vg-count{position:absolute;top:1rem;right:1rem;z-index:6;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--blanc);background:var(--shade);backdrop-filter:blur(6px);padding:.4rem .7rem;border:1px solid rgba(250,248,243,.2);}
+.vg-thumbs{flex-shrink:0;display:flex;gap:.55rem;padding:.85rem;overflow-x:auto;background:var(--bg-2);border-top:1px solid var(--hair);-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.vg-thumbs::-webkit-scrollbar{display:none;}
+.vg-thumb{position:relative;flex-shrink:0;width:74px;height:92px;border:1px solid var(--hair);cursor:pointer;overflow:hidden;background:var(--noir);transition:border-color .3s,opacity .3s;opacity:.55;}
+.vg-thumb.a{border-color:var(--or);opacity:1;}
+.vg-thumb:hover{opacity:1;}
+.vg-thumb img{width:100%;height:100%;object-fit:cover;}
+.vg-thumb .tfb{position:absolute;inset:0;background:repeating-linear-gradient(42deg,#15120d 0 8px,#0f0c08 8px 16px);}
+.vd{padding:clamp(1.8rem,4vw,3.4rem);display:flex;flex-direction:column;}
+@media(min-width:900px){.vd{overflow-y:auto;-webkit-overflow-scrolling:touch;}}
+.vd-cat{font-family:var(--mono);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);}
+.vd-nm{font-family:var(--display);font-weight:700;font-size:clamp(2rem,3vw+.6rem,3.4rem);line-height:1.02;color:var(--fg);margin:.7rem 0 .5rem;}
+.vd-ed{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);}
+.vd-pr{font-family:var(--display);font-weight:500;font-size:clamp(2rem,2.4vw+.5rem,2.8rem);color:var(--or);margin:1.4rem 0;letter-spacing:.01em;}
+.vd-desc{font-family:var(--body);font-size:clamp(1.04rem,.6vw+.7rem,1.18rem);color:var(--fg-2);line-height:1.6;}
+.vd-spec{margin:1.8rem 0;border-top:1px solid var(--hair-or);}
+.vd-row{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;padding:.78rem 0;border-bottom:1px solid var(--hair);align-items:baseline;}
+.vd-row .k{font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);}
+.vd-row .v{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--fg);text-align:right;}
+.vd-cta{display:flex;flex-direction:column;gap:.7rem;margin-top:.4rem;}
+.btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:54px;padding:1rem 1.3rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:all .35s var(--ease);border:1px solid var(--hair-or);background:none;color:var(--fg);}
+.btn-prim{background:var(--or);border-color:var(--or);color:var(--noir);}
+.btn-prim:hover{background:var(--or-soft);border-color:var(--or-soft);color:var(--noir);}
+.btn:hover{border-color:var(--or);color:var(--or);}
+.btn.wise:hover{border-color:#9FE870;color:#9FE870;}
+.vd-close{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--fg-3);margin-top:1.6rem;}
+
+/*/* LA MAISON · redesign sans encadrés */
+.maison{background:var(--bg-2);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+.maison .sec-head{margin-bottom:clamp(2.6rem,5vw,4.4rem);}
+.fairs{font-family:var(--mono);font-size:clamp(.58rem,.4vw+.32rem,.7rem);letter-spacing:.16em;text-transform:uppercase;color:var(--fg-2);margin-top:1.8rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .9rem;}
+.fairs-lab{color:var(--fg-3);letter-spacing:.24em;}
+.fairs b{font-weight:500;color:var(--fg);letter-spacing:.12em;}
+
+/* Colonne signature : grand nombre + texte côte à côte */
+.m-signature{display:grid;grid-template-columns:1fr;gap:2rem;padding-bottom:2rem;margin-top:clamp(2.8rem,5vw,4.4rem);padding-top:clamp(2.4rem,4vw,3.6rem);border-top:1px solid var(--hair);}
+@media(min-width:760px){.m-signature{grid-template-columns:auto 1fr;align-items:center;gap:clamp(2.4rem,5vw,5rem);}}
+.m-sig-n{font-family:var(--display);font-weight:800;font-size:clamp(5.5rem,14vw,11rem);line-height:.84;color:var(--or);letter-spacing:-.01em;white-space:nowrap;}
+.m-sig-n small{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--fg-3);margin-top:.9rem;font-weight:400;}
+.m-sig-body{display:flex;flex-direction:column;gap:1.2rem;}
+.m-sig-body p{font-family:var(--body);font-size:clamp(1.06rem,.7vw+.65rem,1.3rem);color:var(--fg-2);line-height:1.65;}
+
+/* Grille de faits : lignes séparées, pas de boîtes */
+.m-facts{display:grid;grid-template-columns:1fr;margin-top:1.6rem;}
+@media(min-width:620px){.m-facts{grid-template-columns:repeat(2,1fr);margin-top:2rem;}}
+@media(min-width:1000px){.m-facts{grid-template-columns:repeat(4,1fr);}}
+/* Mobile : une colonne, border-top sur chacun */
+.m-fact{padding:clamp(1.3rem,1.8vw,1.8rem) 0;border-top:1px solid var(--hair);}
+/* ≥620 : 2 colonnes, séparateurs verticaux uniquement */
+@media(min-width:620px){
+  .m-fact{padding:clamp(1.3rem,2vw,1.9rem) clamp(1.2rem,2vw,2rem);border-top:none;border-left:1px solid var(--hair);}
+  .m-fact:nth-child(2n+1){border-left:none;padding-left:0;}
+  .m-fact:nth-child(1),.m-fact:nth-child(2){border-top:1px solid var(--hair);}
+}
+/* ≥1000 : 4 colonnes */
+@media(min-width:1000px){
+  .m-fact{padding:clamp(1.3rem,1.8vw,1.9rem) clamp(1.2rem,1.8vw,1.9rem);border-top:none;border-left:1px solid var(--hair);}
+  .m-fact:nth-child(4n+1){border-left:none;padding-left:0;}
+  .m-fact:nth-child(2n+1){border-top:none;}
+  .m-fact:nth-child(-n+4){border-top:1px solid var(--hair);}
+  .m-fact:nth-child(4n+1){border-top:1px solid var(--hair);}
+}
+.m-fact-k{font-family:var(--mono);font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin-bottom:.9rem;}
+.m-fact-v{font-family:var(--body);font-style:italic;font-size:clamp(1.08rem,.8vw+.6rem,1.3rem);color:var(--fg);line-height:1.3;}
+
+/* ALGORITHM HUMAN */
+.alg{background:var(--bg);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+.alg-grid{display:grid;grid-template-columns:1fr;}
+@media(min-width:920px){.alg-grid{grid-template-columns:1.05fr 1fr;}}
+.alg-media{position:relative;aspect-ratio:4/5;background:var(--noir);overflow:hidden;}
+@media(min-width:920px){.alg-media{aspect-ratio:auto;min-height:600px;}}
+.alg-media .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(40deg,#15120d 0 16px,#0f0c08 16px 32px);}
+.alg-media .fb span{font-family:var(--display);font-weight:700;font-size:1.6rem;color:#39352b;letter-spacing:.08em;}
+.alg-media img{position:relative;z-index:2;width:100%;height:100%;object-fit:cover;filter:grayscale(6%) contrast(1.04);}
+.alg-inf{padding:clamp(2.6rem,5vw,5rem);display:flex;flex-direction:column;justify-content:center;}
+.alg-t{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,4vw+.5rem,4.6rem);line-height:.98;color:var(--fg);margin:.8rem 0 .4rem;}
+.alg-sub{font-family:var(--body);font-style:italic;font-size:clamp(1rem,1vw+.5rem,1.3rem);color:var(--fg-2);margin-bottom:2rem;}
+.alg-cert{border-top:1px solid var(--hair-or);}
+.alg-row{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;padding:.82rem 0;border-bottom:1px solid var(--hair);align-items:baseline;}
+.alg-row .k{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);}
+.alg-row .v{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--fg);text-align:right;word-break:break-all;}
+.alg-row .v.price{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--or);}
+.alg-foot{margin-top:2rem;display:flex;flex-direction:column;gap:.9rem;align-items:stretch;}
+.alg-foot .btn-line{width:100%;display:flex;align-items:center;justify-content:space-between;min-height:52px;}
+.alg-close{font-family:var(--mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);text-align:center;}
+.btn-line{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fg);border:1px solid var(--hair-or);padding:.9rem 1.4rem;background:none;cursor:pointer;transition:all .35s var(--ease);}
+.btn-fill{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--noir);background:var(--or);border:1px solid var(--or);padding:.95rem 1.6rem;cursor:pointer;transition:all .35s var(--ease);}
+.btn-fill:hover{background:var(--or-soft);border-color:var(--or-soft);}
+.btn-line:hover{background:var(--or);border-color:var(--or);color:var(--noir);}
+
+.orig{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center;}
+@media(min-width:880px){.orig{grid-template-columns:.8fr 1.2fr;}}
+.orig-n{font-family:var(--display);font-weight:800;font-size:clamp(4.5rem,13vw,10rem);line-height:.86;color:var(--or);}
+.orig-n small{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-3);margin-top:.7rem;}
+
+.acq-sec{background:var(--bg-2);border-top:1px solid var(--hair);}
+.acq-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:2.6rem;}
+@media(min-width:760px){.acq-grid{grid-template-columns:repeat(3,1fr);}}
+.acq-card{background:var(--bg);padding:clamp(1.8rem,3vw,2.6rem);}
+.acq-card h3{font-family:var(--display);font-weight:600;font-size:1.4rem;color:var(--fg);margin:.8rem 0 .6rem;}
+.acq-card p{font-family:var(--body);font-size:1rem;color:var(--fg-2);}
+.acq-card a.go{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.3rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--or);border-bottom:1px solid var(--hair-or);padding-bottom:.3rem;transition:color .3s;}
+.acq-card a.go:hover{color:var(--or-soft);}
+
+footer{background:var(--noir);color:#b8b3a8;border-top:1px solid var(--hair);padding:clamp(3rem,6vw,5rem) 0 2.4rem;}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;}
+.foot-b{font-family:var(--display);font-weight:700;font-size:1.8rem;letter-spacing:.2em;color:var(--blanc);}
+.foot-b sup{font-size:.4em;color:var(--or);}
+.foot-col{font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;line-height:2.1;}
+.foot-col a{cursor:pointer;}
+.foot-col a:hover{color:var(--or);}
+.foot-bar{margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3);}
+
+/* COOKIE */
+#cookie{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:1100;max-width:560px;margin:0 auto;background:var(--surface);border:1px solid var(--hair-or);padding:1.3rem 1.4rem;display:none;}
+#cookie.show{display:block;}
+#cookie p{font-family:var(--body);font-size:.96rem;color:var(--fg-2);line-height:1.5;}
+#cookie .ck-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;align-items:center;}
+.ck-btn{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.7rem 1.2rem;cursor:pointer;border:1px solid var(--hair-or);background:none;color:var(--fg);}
+.ck-btn.acc{background:var(--or);border-color:var(--or);color:var(--noir);}
+.ck-link{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or);cursor:pointer;margin-left:auto;}
+
+/* LEGAL */
+.legal{position:fixed;inset:0;z-index:1200;background:color-mix(in srgb,var(--noir) 80%,transparent);backdrop-filter:blur(8px);display:flex;align-items:flex-start;justify-content:center;padding:clamp(1rem,5vh,4rem) 1rem;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s;overflow-y:auto;}
+.legal.o{opacity:1;visibility:visible;}
+.legal-c{background:var(--surface);border:1px solid var(--hair-or);max-width:760px;width:100%;padding:clamp(1.8rem,4vw,3rem);position:relative;}
+.legal-x{position:absolute;top:1rem;right:1rem;width:42px;height:42px;background:none;border:1px solid var(--hair);color:var(--fg-2);font-size:1rem;cursor:pointer;}
+.legal-c h2{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--fg);margin-bottom:.4rem;padding-right:3rem;}
+.legal-c .upd{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);margin-bottom:1.6rem;}
+.legal-c h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--or);margin:1.6rem 0 .5rem;}
+.legal-c p{font-family:var(--body);font-size:1.02rem;color:var(--fg-2);line-height:1.65;margin-bottom:.6rem;}
+.legal-c a{color:var(--or);}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.rv.in{opacity:1;transform:translateY(0);}
+.catband{margin-top:clamp(3rem,6vw,5rem);border:1px solid var(--hair-or);background:var(--bg-2);padding:clamp(1.8rem,4vw,2.8rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem;}
+.catband-l{max-width:540px;}
+.catband-l .eyebrow{display:block;margin-bottom:.7rem;}
+.catband-l h3{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,2.4vw,2.1rem);color:var(--fg);line-height:1.05;}
+.catband-l p{color:var(--fg-2);font-size:1rem;margin-top:.6rem;}
+.catband-cta{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;padding:1rem 2rem;background:var(--or);border:1px solid var(--or);color:var(--noir);transition:all .35s var(--ease);white-space:nowrap;}
+.catband-cta:hover{background:var(--or-soft);border-color:var(--or-soft);}
+@media(max-width:760px){.nav-links{display:none;}.burger{display:flex;}.vg-arr{width:44px;height:44px;}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.rv{opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+
+<div id="ld"><div class="ld-b">SEYMR<sup>®</sup></div><div class="ld-l"></div><div class="ld-s">Maison de Haute Facture</div></div>
+
+<nav class="nav" id="nav"><div class="wrap">
+  <a href="#hero" class="nav-b">SEYMR<sup>®</sup></a>
+  <div class="nav-links">
+    <a href="#collection"><span class="fr">Collection</span><span class="en">Collection</span></a>
+    <a href="#maison"><span class="fr">La Maison</span><span class="en">The House</span></a>
+    <a href="#algorithm">Algorithm Human</a>
+    <a href="#acquisition"><span class="fr">Acquisition</span><span class="en">Acquire</span></a>
+  </div>
+  <div class="nav-r">
+    <button class="ico" id="langBtn" aria-label="Langue">FR</button>
+    <button class="ico" id="themeBtn" aria-label="Thème">◐</button>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div></nav>
+
+<div class="drawer" id="drawer">
+  <a href="#collection" data-close><span class="fr">Collection</span><span class="en">Collection</span></a>
+  <a href="#maison" data-close><span class="fr">La Maison</span><span class="en">The House</span></a>
+  <a href="#algorithm" data-close>Algorithm Human</a>
+  <a href="#acquisition" data-close><span class="fr">Acquisition</span><span class="en">Acquire</span></a>
+</div>
+
+<!-- HERO VIDÉO : seymr-hero.mp4 (H.264 baseline, boucle muette < 12s, max 8 Mo) · poster seymr-hero-poster.webp -->
+<header class="hero" id="hero">
+  <div class="hero-media">
+    <img class="hero-poster" src="seymr-hero-poster.webp" alt="" aria-hidden="true" fetchpriority="high">
+    <video
+      id="heroVid"
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      preload="none"
+      poster="seymr-hero-poster.webp"
+      x-webkit-airplay="allow"
+      disableremoteplayback
+    >
+      <source src="seymr-hero.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2">
+      <!-- <source src="seymr-hero.webm" type="video/webm; codecs=vp9,opus"> déposer si disponible -->
+    </video>
+  </div>
+  <div class="hero-c wrap">
+    <h1>SEYMR<sup>®</sup></h1>
+    <p class="hero-sub"><span class="fr">Maison de Haute Facture</span><span class="en">House of Haute Facture</span></p>
+    <div class="hero-meta">
+      <span><b>9</b> <span class="fr">éditions numérotées</span><span class="en">numbered editions</span></span>
+      <span><b>36</b> <span class="fr">œuvres originales</span><span class="en">original works</span></span>
+      <span><span class="fr">Fait main</span><span class="en">Handmade</span> · <b>Londres</b></span>
+      <span>Saint-Barthélemy · <b>Karukera</b></span>
+    </div>
+    <div class="hero-cta" onclick="document.getElementById('collection').scrollIntoView()"><span class="fr">Entrer dans la galerie</span><span class="en">Enter the gallery</span> →</div>
+  </div>
+</header>
+
+<div class="freq"><div class="freq-t" id="freqT">
+  <span><b>SEYMR®</b></span><i></i>
+  <span><span class="fr">Fait main, sans sous-traitance</span><span class="en">Handmade, no outsourcing</span></span><i></i>
+  <span><span class="fr">Papier Arches · marqueur peinture à l'huile noire</span><span class="en">Arches paper · black oil-paint marker</span></span><i></i>
+  <span><span class="fr">Soie · cuir pleine fleur</span><span class="en">Silk · full-grain leather</span></span><i></i>
+  <span>Polygon · ERC-721</span><i></i>
+  <span><span class="fr">L'édition est fermée</span><span class="en">The edition is closed</span></span><i></i>
+</div></div>
+
+<section id="collection">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow"><span class="fr">Éditions numérotées</span><span class="en">Numbered editions</span></span>
+      <h2 class="sec-title">Collection</h2>
+      <p class="sec-intro"><span class="fr">Neuf pièces, faites main à Londres, transposées d'une encre originale. Touchez une création pour entrer dans sa galerie et l'acquérir.</span><span class="en">Nine pieces, handmade in London, transposed from an original ink. Open a creation to enter its gallery and acquire it.</span></p>
+      <div class="filt" id="filt">
+        <button class="a" data-f="all"><span class="fr">Tout</span><span class="en">All</span></button>
+        <button data-f="mobilier"><span class="fr">Mobilier</span><span class="en">Furniture</span></button>
+        <button data-f="tirage"><span class="fr">Tirages</span><span class="en">Prints</span></button>
+        <button data-f="maroquinerie"><span class="fr">Maroquinerie</span><span class="en">Leather</span></button>
+        <button data-f="edition"><span class="fr">Édition</span><span class="en">Edition</span></button>
+      </div>
+    </div>
+    <div class="grid rv" id="grid"></div>
+    <div class="catband rv">
+      <div class="catband-l">
+        <span class="eyebrow"><span class="fr">Document</span><span class="en">Document</span></span>
+        <h3><span class="fr">Le catalogue des neuf éditions</span><span class="en">The catalogue of the nine editions</span></h3>
+        <p><span class="fr">Pièces numérotées, matières, dimensions et tarifs. À consulter, imprimer ou enregistrer en PDF.</span><span class="en">Numbered pieces, materials, dimensions and prices. To browse, print or save as PDF.</span></p>
+      </div>
+      <a class="catband-cta" href="catalogue.html"><span class="fr">Ouvrir le catalogue</span><span class="en">Open the catalogue</span> →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LA MAISON -->
+<section id="maison" class="maison">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow"><span class="fr">Depuis 2018</span><span class="en">Since 2018</span></span>
+      <h2 class="sec-title"><span class="fr">La Maison</span><span class="en">The House</span></h2>
+      <p class="sec-intro" style="max-width:640px;"><span class="fr">L'identité de SEYMR prend racine en 2018, autour de son fondateur né en 1999. Le nom rend hommage au peuple Maurus, venu d'Afrique, dont le savoir compta à la Renaissance. Avec une rigueur solopreneur intégrale, la Maison perpétue cet héritage par la transmission. Depuis 2021, elle collabore avec le Redwood Art Group et porte son œuvre sur les scènes internationales.</span><span class="en">SEYMR took root in 2018, around its founder born in 1999. The name honours the Maurus people, from Africa, whose knowledge mattered at the Renaissance. With an integral solopreneur rigour, the House perpetuates that heritage through transmission. Since 2021 it works with Redwood Art Group and brings its work to international stages.</span></p>
+      <p class="fairs"><span class="fairs-lab"><span class="fr">Présentée à</span><span class="en">Shown at</span></span><b>Red Dot Miami · Spectrum Miami · Artexpo New York</b></p>
+    </div>
+    <div class="m-signature rv">
+      <div class="m-sig-n">36<small><span class="fr">Œuvres originales</span><span class="en">Original works</span></small></div>
+      <div class="m-sig-body">
+        <p><span class="fr">Ces œuvres sont la matrice irréductible depuis laquelle chaque édition naît. L'original reste une pièce unique, jamais reproduite à l'identique, disponible à l'acquisition : encadré, signé, seul exemplaire.</span><span class="en">These works are the irreducible matrix from which each edition is born. The original stays a single piece, never reproduced identically, available for acquisition: framed, signed, the sole example.</span></p>
+        <p><span class="fr">Guadeloupe, Saint-Barthélemy, Londres. Un seul esprit, sans délégation.</span><span class="en">Guadeloupe, Saint-Barthélemy, London. A single mind, no delegation.</span></p>
+        <a class="btn-fill" style="margin-top:.6rem;align-self:flex-start;text-decoration:none;display:inline-block;" href="mailto:contact@seymr.fr?subject=Dossier%20%C2%B7%20Encre%20originale%20encadr%C3%A9e&body=SEYMR%C2%AE%20%C2%B7%20Encre%20originale%20encadr%C3%A9e.%20Je%20souhaite%20recevoir%20le%20dossier%20et%20les%20disponibilit%C3%A9s."><span class="fr">Demander le dossier</span><span class="en">Request the dossier</span> →</a>
+      </div>
+    </div>
+
+    <div class="m-facts rv">
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Atelier</span><span class="en">Atelier</span></div>
+        <div class="m-fact-v"><span class="fr">Sans sous-traitance. Chaque geste est signé.</span><span class="en">No outsourcing. Every gesture is signed.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Matières</span><span class="en">Materials</span></div>
+        <div class="m-fact-v"><span class="fr">Cuir pleine fleur, soie naturelle.</span><span class="en">Full-grain leather, natural silk.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k">Blockchain</div>
+        <div class="m-fact-v"><span class="fr">Sept œuvres minées sur Polygon.</span><span class="en">Seven works minted on Polygon.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Écrit</span><span class="en">Text</span></div>
+        <div class="m-fact-v"><span class="fr">Un manifeste métaphysique fonde la démarche.</span><span class="en">A metaphysical manifesto grounds the practice.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Façonnage</span><span class="en">Craft</span></div>
+        <div class="m-fact-v"><span class="fr">Conçu et expédié depuis Londres.</span><span class="en">Made and shipped from London.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Transposition</span><span class="en">Transposition</span></div>
+        <div class="m-fact-v"><span class="fr">Chaque motif passe de l'original à la pièce.</span><span class="en">Each motif moves from the original to the piece.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Support</span><span class="en">Medium</span></div>
+        <div class="m-fact-v"><span class="fr">Papier Arches, marqueur huile noire.</span><span class="en">Arches paper, black oil marker.</span></div>
+      </div>
+      <div class="m-fact">
+        <div class="m-fact-k"><span class="fr">Scènes</span><span class="en">Stages</span></div>
+        <div class="m-fact-v"><span class="fr">Artexpo NY, Spectrum Miami, Red Dot Miami.</span><span class="en">Artexpo NY, Spectrum Miami, Red Dot Miami.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="algorithm" class="alg" style="padding:0;">
+  <div class="alg-grid">
+    <div class="alg-media"><div class="fb"><span>ALGORITHM HUMAN</span></div>
+      <img src="seymr-algorithm-human.webp" alt="SEYMR® Algorithm Human, œuvre matricielle 1/1" onerror="this.style.display='none'"></div>
+    <div class="alg-inf rv">
+      <span class="eyebrow"><span class="fr">Œuvre matricielle · 1/1</span><span class="en">Matrix work · 1/1</span></span>
+      <h2 class="alg-t">Algorithm<br>Human</h2>
+      <p class="alg-sub"><span class="fr">La matrice dont dérivent les éditions.</span><span class="en">The matrix from which the editions derive.</span></p>
+      <div class="alg-cert">
+        <div class="alg-row"><span class="k"><span class="fr">Édition</span><span class="en">Edition</span></span><span class="v">1 / 1</span></div>
+        <div class="alg-row"><span class="k">Support</span><span class="v">Arches 310 g/m²</span></div>
+        <div class="alg-row"><span class="k"><span class="fr">Chaîne</span><span class="en">Chain</span></span><span class="v">Polygon · ERC-721</span></div>
+        <div class="alg-row"><span class="k"><span class="fr">Contrat</span><span class="en">Contract</span></span><span class="v">0x5918CD4A…58276f</span></div>
+        <div class="alg-row"><span class="k"><span class="fr">Référence</span><span class="en">Reference</span></span><span class="v">Redwood Art Group · 2021</span></div>
+        <div class="alg-row"><span class="k"><span class="fr">Prix demandé</span><span class="en">Asking price</span></span><span class="v price">198 000 $</span></div>
+      </div>
+      <div class="alg-foot">
+        <a class="btn-line" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:space-between;" href="mailto:contact@seymr.fr?subject=Dossier%20%C2%B7%20Algorithm%20Human&body=SEYMR%C2%AE%20%C2%B7%20Algorithm%20Human%20(1%2F1).%20Je%20souhaite%20recevoir%20le%20dossier%20complet%20et%20les%20conditions%20d%27acquisition."><span class="fr">Demander le dossier</span><span class="en">Request the dossier</span> →</a>
+        <span class="alg-close">Karukera. Encre. Blockchain.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="acquisition" class="acq-sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Acquisition</span>
+      <h2 class="sec-title"><span class="fr">Acquérir</span><span class="en">Acquire</span></h2>
+      <p class="sec-intro"><span class="fr">Carte bancaire sécurisée sur chaque pièce. Wise, WhatsApp et email pour le sur-mesure et les œuvres originales.</span><span class="en">Secure card on every piece. Wise, WhatsApp and email for bespoke and original works.</span></p>
+    </div>
+    <div class="acq-grid rv">
+      <div class="acq-card"><span class="eyebrow"><span class="fr">Carte</span><span class="en">Card</span></span><h3>Stripe</h3><p><span class="fr">Paiement immédiat sur chaque création.</span><span class="en">Immediate payment on every creation.</span></p><a class="go" href="#collection"><span class="fr">Ouvrir la collection</span><span class="en">Open the collection</span> →</a></div>
+      <div class="acq-card"><span class="eyebrow">WhatsApp</span><h3><span class="fr">Conversation</span><span class="en">Conversation</span></h3><p><span class="fr">Conseil, sur-mesure, disponibilités.</span><span class="en">Advisory, bespoke, availability.</span></p><a class="go" href="https://wa.me/590690517388" target="_blank" rel="noopener">+590 690 51 73 88 →</a></div>
+      <div class="acq-card"><span class="eyebrow">Email</span><h3>Contact</h3><p><span class="fr">Dossiers, ensembles, collectionneurs.</span><span class="en">Dossiers, sets, collectors.</span></p><a class="go" href="mailto:contact@seymr.fr">contact@seymr.fr →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-b">SEYMR<sup>®</sup></div>
+      <div class="foot-col">Saint-Barthélemy<br>Karukera · Londres<br><a href="mailto:contact@seymr.fr">contact@seymr.fr</a><br><a href="https://wa.me/590690517388">+590 690 51 73 88</a></div>
+      <div class="foot-col">
+        <a onclick="openLegal('mentions')"><span class="fr">Mentions légales</span><span class="en">Legal notice</span></a><br>
+        <a onclick="openLegal('cgv')">CGV</a><br>
+        <a onclick="openLegal('confidentialite')"><span class="fr">Confidentialité</span><span class="en">Privacy</span></a><br>
+        <a onclick="openLegal('cookies')">Cookies</a>
+      </div>
+    </div>
+    <div class="foot-bar"><span>SEYMR® · SIRET 902 423 698 · R.C.S. Basse-Terre</span><span>L'édition est fermée.</span></div>
+  </div>
+</footer>
+
+<!-- VISIONNEUSE -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Galerie produit">
+  <div class="viewer-top"><span class="viewer-brand">SEYMR<sup>®</sup></span><button class="viewer-x" id="viewerX" aria-label="Fermer">✕</button></div>
+  <div class="viewer-grid">
+    <div class="vg">
+      <div class="vg-main" id="vgMain">
+        <div class="vg-count" id="vgCount">1 / 1</div>
+        <button class="vg-arr prev" id="vgPrev" aria-label="Précédent">←</button>
+        <div class="vg-track" id="vgTrack"></div>
+        <button class="vg-arr next" id="vgNext" aria-label="Suivant">→</button>
+      </div>
+      <div class="vg-thumbs" id="vgThumbs"></div>
+    </div>
+    <div class="vd">
+      <div class="vd-cat" id="vdCat"></div>
+      <h2 class="vd-nm" id="vdNm"></h2>
+      <div class="vd-ed" id="vdEd"></div>
+      <div class="vd-pr" id="vdPr"></div>
+      <p class="vd-desc" id="vdDesc"></p>
+      <div class="vd-spec" id="vdSpec"></div>
+      <div class="vd-cta">
+        <a class="btn btn-prim" id="ctaStripe" href="#" target="_blank" rel="noopener"><span><span class="fr">Payer par carte</span><span class="en">Pay by card</span></span><span>→</span></a>
+        <a class="btn wise" id="ctaWise" href="https://wise.com/pay/business/seymr2" target="_blank" rel="noopener"><span><span class="fr">Payer via Wise</span><span class="en">Pay via Wise</span></span><span>→</span></a>
+        <a class="btn" id="ctaWa" href="#" target="_blank" rel="noopener"><span>WhatsApp</span><span>→</span></a>
+        <a class="btn" id="ctaMail" href="#"><span>Email</span><span>→</span></a>
+      </div>
+      <div class="vd-close">Documenté. Opératif. Vérifiable.</div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIES -->
+<div id="cookie">
+  <p><span class="fr">Ce site limite les cookies au strict nécessaire à la navigation. Le paiement est traité par Stripe, qui dépose ses propres cookies sur son domaine sécurisé. Aucun traçage publicitaire.</span><span class="en">This site keeps cookies to the strict minimum for navigation. Payment is handled by Stripe on its own secure domain. No advertising tracking.</span></p>
+  <div class="ck-row">
+    <button class="ck-btn acc" onclick="cookieChoice('accept')"><span class="fr">Accepter</span><span class="en">Accept</span></button>
+    <button class="ck-btn" onclick="cookieChoice('refuse')"><span class="fr">Refuser</span><span class="en">Decline</span></button>
+    <span class="ck-link" onclick="openLegal('cookies')"><span class="fr">En savoir plus</span><span class="en">Learn more</span></span>
+  </div>
+</div>
+
+<!-- LEGAL -->
+<div class="legal" id="legal" role="dialog" aria-modal="true">
+  <div class="legal-c">
+    <button class="legal-x" id="legalX" aria-label="Fermer">✕</button>
+    <h2 id="legalTitle"></h2>
+    <div class="upd" id="legalUpd"></div>
+    <div id="legalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ═══════ SEYMR® · DONNÉES (source de vérité : Stripe) ═══════
+   Visuels nommés selon un schéma fixe : seymr-<slug>-N.webp.
+   Le compte de chaque tableau "img" suit le nombre de visuels réels.
+   Toute image absente est masquée automatiquement. */
+var DATA=[
+ {id:'sisit',cat:'mobilier',nm:'Fauteuil SISIT',ed:'22',price:4200,
+  stripe:'https://buy.stripe.com/5kQcN5ca4aNU6Tj6fN9MY09',
+  fr:'Velours d\u2019ameublement ignifuge et hydrofuge. Hêtre éco-responsable. Quatre surfaces personnalisables. Garantie dix ans.',
+  en:'Flame-retardant, water-repellent upholstery velvet. Eco-responsible beech. Four customisable surfaces. Ten-year warranty.',
+  spec:[['Format','H 74 · L 63 cm'],['Assise','49 cm'],['Poids','7 kg'],['Façon','Londres']],
+  img:['seymr-sisit-1.webp','seymr-sisit-2.webp','seymr-sisit-3.webp','seymr-sisit-4.webp','seymr-sisit-5.webp']},
+
+ {id:'paravent',cat:'mobilier',nm:'Paravent Sculptural',ed:'44',price:5500,
+  stripe:'https://buy.stripe.com/3cI7sLfmgcW2a5v9rZ9MY08',
+  fr:'Quatre panneaux, charnières invisibles, repliable. Deux faces imprimées. Structure garantie dix ans.',
+  en:'Four panels, invisible hinges, foldable. Both faces printed. Structure warranted ten years.',
+  spec:[['Format','224 × 152 cm'],['Panneaux','4'],['Impression','2 faces'],['Garantie','10 / 3 ans']],
+  img:['seymr-paravent-1.webp','seymr-paravent-2.webp']},
+
+ {id:'tapis',cat:'mobilier',nm:'Tapis d\u2019Art NEXUS',ed:'44',price:2200,
+  stripe:'https://buy.stripe.com/4gMeVd5LGf4afpP33B9MY0a',
+  fr:'Velours frappé ou panne marbrée. Base antidérapante latex et jute. Franges coton en option. Épaisseur six millimètres.',
+  en:'Crushed velvet or marbled panne. Anti-slip latex and jute base. Optional cotton fringes. Six millimetres thick.',
+  spec:[['Format XL','128 × 290 cm'],['Épaisseur','6 mm'],['Base','Latex · jute'],['Finition','Velours']],
+  img:['seymr-tapis-1.webp','seymr-tapis-2.webp']},
+
+ {id:'assise',cat:'mobilier',nm:'Assise Basse',ed:'44',price:2200,
+  stripe:'https://buy.stripe.com/28E8wP4HC1dka5v33B9MY0d',
+  fr:'Suédine Vision 250 g/m². Housse amovible, lavable à trente degrés. Quatre zones imprimables.',
+  en:'Vision suedine 250 g/m². Removable cover, washable at thirty degrees. Four printable zones.',
+  spec:[['Format','Ø 70 × H 70 cm'],['Tissu','Suédine 250 g/m²'],['Housse','Amovible'],['Entretien','30°C']],
+  img:['seymr-assise-1.webp','seymr-assise-2.webp','seymr-assise-3.webp']},
+
+ {id:'soie',cat:'tirage',nm:'Tirage sur Soie',ed:'50',price:950,
+  stripe:'https://buy.stripe.com/28E8wPde809gelLgUr9MY0b',
+  fr:'Soie naturelle grade 6A. Cadre bois noir mat FSC, vitre acrylique. 2 400 DPI, encres à l\u2019eau.',
+  en:'Grade 6A natural silk. Matte black FSC frame, acrylic glass. 2,400 DPI, water-based inks.',
+  spec:[['Soie','51 × 51 cm'],['Encadré','61 × 61 cm'],['Résolution','2 400 DPI'],['Cadre','Bois FSC']],
+  img:['seymr-soie-1.webp','seymr-soie-2.webp']},
+
+ {id:'papier',cat:'tirage',nm:'Tirage Papier Grand Format',ed:'50',price:450,
+  stripe:'https://buy.stripe.com/28E6oHeicg8eb9z47F9MY0e',
+  fr:'Papier d\u2019art 230 g/m². Impression pigmentaire archive.',
+  en:'Fine-art paper 230 g/m². Archival pigment printing.',
+  spec:[['Grand','80 × 100 cm'],['Petit','50 × 70 cm'],['Papier','230 g/m²'],['Tirage','Archive']],
+  img:['seymr-papier-1.webp','seymr-papier-2.webp','seymr-papier-3.webp','seymr-papier-4.webp','seymr-papier-5.webp','seymr-papier-6.webp','seymr-papier-7.webp','seymr-papier-8.webp']},
+
+ {id:'sac',cat:'maroquinerie',nm:'Sac Conqueror',ed:'44',price:1200,
+  stripe:'https://buy.stripe.com/6oU8wPa1Wf4a0uVbA79MY0c',
+  fr:'Cuir Nappa pleine fleur, doublure daim. Bords peints à la main. Quatre empiècements gravés du motif.',
+  en:'Full-grain Nappa leather, suede lining. Hand-painted edges. Four panels carrying the motif.',
+  spec:[['Format','51 × 28,5 × 23 cm'],['Cuir','Nappa pleine fleur'],['Bords','Peints main'],['Doublure','Daim']],
+  img:['seymr-sac-1.webp','seymr-sac-2.webp']},
+
+ {id:'pochette',cat:'maroquinerie',nm:'Pochette Portfolio',ed:'100',price:750,
+  stripe:'https://buy.stripe.com/6oUdR9a1W1dkdhH9rZ9MY0g',
+  fr:'Cuir Nappa lisse. Surpiqûres charbon. Quincaillerie or. Deux faces signées.',
+  en:'Smooth Nappa leather. Charcoal topstitching. Gold hardware. Two signed faces.',
+  spec:[['Format','38 × 26 × 2 cm'],['Cuir','Nappa lisse'],['Quincaillerie','Or'],['Faces','2']],
+  img:['seymr-pochette-1.webp','seymr-pochette-2.webp']},
+
+ {id:'manifeste',cat:'edition',nm:'Manifeste Collector',ed:'500',price:90,
+  stripe:'https://buy.stripe.com/28E9AT3Dy5tA0uV8nV9MY0f',
+  fr:'168 pages, reliure cousue main. Le texte métaphysique qui fonde SEYMR.',
+  en:'168 pages, hand-sewn binding. The metaphysical text that grounds SEYMR.',
+  spec:[['Pages','168'],['Format','24 × 32 cm'],['Reliure','Cousue main'],['Traités','5']],
+  img:['seymr-manifeste-1.webp','seymr-manifeste-2.webp']}
+];
+
+var CATLAB={mobilier:['Mobilier','Furniture'],tirage:['Tirage d\u2019Art','Art Print'],maroquinerie:['Maroquinerie','Leather'],edition:['Édition','Edition']};
+function L(){return document.documentElement.getAttribute('data-lang');}
+function eur(p){return p.toLocaleString('fr-FR').replace(/\u202f/g,'\u00a0')+' \u20ac';}
+
+function render(){
+  var g=document.getElementById('grid'),h='';
+  for(var i=0;i<DATA.length;i++){
+    var p=DATA[i],first=p.img[0]||'';
+    h+='<article class="card" data-cat="'+p.cat+'" onclick="openProduct(\''+p.id+'\')" tabindex="0" onkeydown="if(event.key===\'Enter\')openProduct(\''+p.id+'\')">'+
+        '<div class="card-frame"><div class="card-fallback"><span>'+p.nm+'</span></div>'+
+          '<img src="'+first+'" alt="SEYMR® '+p.nm+'" loading="lazy" decoding="async" onerror="this.style.opacity=0">'+
+          '<div class="card-ed"><i></i>ÉD. '+p.ed+'</div>'+
+          (p.img.length>1?'<div class="card-count">'+p.img.length+' \u25A0</div>':'')+
+          '<div class="card-view"><span class="fr">Voir la galerie</span><span class="en">View gallery</span> →</div></div>'+
+        '<div class="card-body"><div><div class="card-cat"><span class="fr">'+CATLAB[p.cat][0]+'</span><span class="en">'+CATLAB[p.cat][1]+'</span></div>'+
+          '<h3 class="card-nm">'+p.nm+'</h3></div><div class="card-pr">'+eur(p.price)+'</div></div></article>';
+  }
+  g.innerHTML=h;
+}
+function initFilter(){
+  var b=document.querySelectorAll('#filt button');
+  for(var i=0;i<b.length;i++){
+    b[i].addEventListener('click',function(){
+      var f=this.getAttribute('data-f'),all=document.querySelectorAll('#filt button');
+      for(var j=0;j<all.length;j++){all[j].classList.remove('a');}
+      this.classList.add('a');
+      var c=document.querySelectorAll('.card');
+      for(var k=0;k<c.length;k++){c[k].style.display=(f==='all'||c[k].getAttribute('data-cat')===f)?'flex':'none';}
+    });
+  }
+}
+
+var V={p:null,idx:0,n:0};
+function findP(id){for(var i=0;i<DATA.length;i++){if(DATA[i].id===id)return DATA[i];}return null;}
+function openProduct(id){
+  var p=findP(id);if(!p)return;V.p=p;V.idx=0;V.n=p.img.length;
+  var sl='',ts='';
+  for(var i=0;i<p.img.length;i++){
+    sl+='<div class="vg-slide"><div class="fb"><span>'+p.nm+'</span></div><img src="'+p.img[i]+'" alt="SEYMR® '+p.nm+' '+(i+1)+'" onerror="this.style.display=\'none\'"></div>';
+    ts+='<button class="vg-thumb'+(i===0?' a':'')+'" onclick="goTo('+i+')" aria-label="Visuel '+(i+1)+'"><div class="tfb"></div><img src="'+p.img[i]+'" alt="" onerror="this.style.display=\'none\'"></button>';
+  }
+  document.getElementById('vgTrack').innerHTML=sl;
+  document.getElementById('vgThumbs').innerHTML=ts;
+  document.getElementById('vdCat').innerHTML='<span class="fr">'+CATLAB[p.cat][0]+'</span><span class="en">'+CATLAB[p.cat][1]+'</span>';
+  document.getElementById('vdNm').textContent=p.nm;
+  document.getElementById('vdEd').innerHTML='<span class="fr">Édition '+p.ed+' exemplaires</span><span class="en">Edition of '+p.ed+'</span>';
+  document.getElementById('vdPr').textContent=eur(p.price);
+  document.getElementById('vdDesc').innerHTML='<span class="fr">'+p.fr+'</span><span class="en">'+p.en+'</span>';
+  var sp='';for(var s=0;s<p.spec.length;s++){sp+='<div class="vd-row"><span class="k">'+p.spec[s][0]+'</span><span class="v">'+p.spec[s][1]+'</span></div>';}
+  document.getElementById('vdSpec').innerHTML=sp;
+  document.getElementById('ctaStripe').href=p.stripe;
+  var msg=encodeURIComponent('SEYMR® · '+p.nm+' ('+eur(p.price)+'). Je souhaite acquérir cette pièce.');
+  document.getElementById('ctaWa').href='https://wa.me/590690517388?text='+msg;
+  document.getElementById('ctaMail').href='mailto:contact@seymr.fr?subject='+encodeURIComponent('Acquisition · '+p.nm)+'&body='+msg;
+  goTo(0);
+  document.getElementById('viewer').classList.add('o');document.body.classList.add('lock');
+  document.getElementById('viewerX').focus();
+}
+function goTo(i){
+  if(i<0)i=V.n-1;if(i>=V.n)i=0;V.idx=i;
+  document.getElementById('vgTrack').style.transform='translateX(-'+(i*100)+'%)';
+  document.getElementById('vgCount').textContent=(i+1)+' / '+V.n;
+  var t=document.querySelectorAll('.vg-thumb');
+  for(var k=0;k<t.length;k++){if(k===i){t[k].classList.add('a');}else{t[k].classList.remove('a');}}
+}
+function closeViewer(){document.getElementById('viewer').classList.remove('o');document.body.classList.remove('lock');}
+document.getElementById('viewerX').addEventListener('click',closeViewer);
+document.getElementById('vgPrev').addEventListener('click',function(){goTo(V.idx-1);});
+document.getElementById('vgNext').addEventListener('click',function(){goTo(V.idx+1);});
+document.addEventListener('keydown',function(e){
+  if(!document.getElementById('viewer').classList.contains('o'))return;
+  if(e.key==='Escape')closeViewer();else if(e.key==='ArrowLeft')goTo(V.idx-1);else if(e.key==='ArrowRight')goTo(V.idx+1);
+});
+var sx=0,vm=document.getElementById('vgMain');
+vm.addEventListener('touchstart',function(e){sx=e.changedTouches[0].clientX;},{passive:true});
+vm.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>42){goTo(V.idx+(d<0?1:-1));}},{passive:true});
+
+function freeRequest(name){
+  var msg=encodeURIComponent('SEYMR® · '+name+'. Je souhaite recevoir le dossier et les disponibilités.');
+  window.location.href='mailto:contact@seymr.fr?subject='+encodeURIComponent('Dossier · '+name)+'&body='+msg;
+}
+
+/* LANG / THÈME / DRAWER / NAV / REVEAL */
+document.getElementById('langBtn').addEventListener('click',function(){var n=L()==='fr'?'en':'fr';document.documentElement.setAttribute('data-lang',n);this.textContent=n.toUpperCase();});
+document.getElementById('themeBtn').addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');document.documentElement.setAttribute('data-theme',c==='dark'?'light':'dark');});
+var burger=document.getElementById('burger'),drawer=document.getElementById('drawer');
+burger.addEventListener('click',function(){this.classList.toggle('o');drawer.classList.toggle('o');});
+var dl=document.querySelectorAll('[data-close]');
+for(var d=0;d<dl.length;d++){dl[d].addEventListener('click',function(){burger.classList.remove('o');drawer.classList.remove('o');});}
+window.addEventListener('scroll',function(){var n=document.getElementById('nav');if(window.scrollY>40){n.classList.add('s');}else{n.classList.remove('s');}});
+function initReveal(){
+  var e=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<e.length;i++){e[i].classList.add('in');}
+    return;
+  }
+  var io=new IntersectionObserver(function(en){
+    for(var i=0;i<en.length;i++){
+      if(en[i].isIntersecting){
+        en[i].target.classList.add('in');
+        io.unobserve(en[i].target);
+      }
+    }
+  },{threshold:0,rootMargin:'0px 0px -5% 0px'});
+  for(var j=0;j<e.length;j++){io.observe(e[j]);}
+  /* Filet de sécurité : tout élément déjà dans la fenêtre, ou plus grand qu'elle,
+     est révélé immédiatement. Évite qu'une grille très haute reste invisible. */
+  function sweep(){
+    var r=document.querySelectorAll('.rv');
+    for(var k=0;k<r.length;k++){
+      var b=r[k].getBoundingClientRect();
+      if(b.top<window.innerHeight&&b.bottom>0){r[k].classList.add('in');}
+    }
+  }
+  sweep();
+  window.addEventListener('scroll',sweep,{passive:true});
+  window.addEventListener('resize',sweep,{passive:true});
+}
+function initFreq(){var t=document.getElementById('freqT');t.innerHTML+=t.innerHTML;}
+
+/* COOKIES */
+function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function cookieChoice(c){lsSet('seymr_cookie',c);document.getElementById('cookie').classList.remove('show');}
+function initCookie(){if(!lsGet('seymr_cookie')){setTimeout(function(){document.getElementById('cookie').classList.add('show');},1800);}}
+
+/* LEGAL */
+var LEGAL={
+ mentions:{t:'Mentions légales',u:'Mise à jour : juin 2026',b:
+  '<h3>Éditeur</h3><p>SEYMR®, Maison de Haute Facture. SIRET 902 423 698, R.C.S. Basse-Terre. Siège : 51 route de Marigot, Carrefour les 4 Chemins, 97133 Saint-Barthélemy.</p>'+
+  '<h3>Directeur de la publication</h3><p>L. Jean.</p>'+
+  '<h3>Contact</h3><p>contact@seymr.fr · +590 690 51 73 88.</p>'+
+  '<h3>Hébergeur</h3><p>OVH SAS, 2 rue Kellermann, 59100 Roubaix, France · www.ovhcloud.com.</p>'+
+  '<h3>Propriété intellectuelle</h3><p>Les œuvres, motifs, textes et visuels présents sur ce site appartiennent à SEYMR®. Toute reproduction sans autorisation écrite est interdite.</p>'},
+ cgv:{t:'Conditions générales de vente',u:'Mise à jour : juin 2026',b:
+  '<h3>Objet</h3><p>Les présentes conditions régissent la vente des créations SEYMR® entre la Maison et l\u2019acquéreur. Toute commande emporte adhésion.</p>'+
+  '<h3>Produits</h3><p>Chaque création est une édition numérotée, faite main à la commande. Les visuels ont valeur indicative ; de légères variations de teinte et de matière sont propres au fait main.</p>'+
+  '<h3>Prix</h3><p>Prix en euros, toutes taxes comprises. La Maison se réserve le droit de modifier ses prix ; la création est facturée au tarif en vigueur lors de la commande.</p>'+
+  '<h3>Paiement</h3><p>Paiement par carte via Stripe ou par virement Wise. La commande est ferme à réception du règlement.</p>'+
+  '<h3>Façonnage et livraison</h3><p>Pièces façonnées et expédiées depuis Londres. Délai de production indiqué lors de la commande. Expédition assurée et suivie par transporteur ; droits de douane éventuels hors Union européenne à la charge de l\u2019acquéreur.</p>'+
+  '<h3>Rétractation</h3><p>Pour les pièces non personnalisées, droit de rétractation de quatorze jours à compter de la réception (article L221-18 du Code de la consommation). Les pièces faites sur mesure ou personnalisées sont exclues de ce droit (article L221-28).</p>'+
+  '<h3>Garanties</h3><p>Garanties légales de conformité et contre les vices cachés. Réclamations : contact@seymr.fr.</p>'+
+  '<h3>Droit applicable</h3><p>Droit français. À défaut d\u2019accord amiable, médiation de la consommation puis tribunaux compétents.</p>'},
+ confidentialite:{t:'Politique de confidentialité',u:'Mise à jour : juin 2026',b:
+  '<h3>Responsable</h3><p>SEYMR® traite les données dans le respect du RGPD.</p>'+
+  '<h3>Données collectées</h3><p>Coordonnées transmises lors d\u2019une commande ou d\u2019une prise de contact : nom, email, adresse de livraison. Les données de paiement sont traitées directement par Stripe ; la Maison n\u2019y a pas accès.</p>'+
+  '<h3>Finalités</h3><p>Traitement des commandes, livraison, réponse aux demandes, obligations comptables.</p>'+
+  '<h3>Destinataires</h3><p>Prestataire de paiement (Stripe), transporteur, hébergeur. Aucune donnée n\u2019est vendue.</p>'+
+  '<h3>Conservation</h3><p>Durée nécessaire au traitement puis aux obligations légales.</p>'+
+  '<h3>Vos droits</h3><p>Accès, rectification, effacement, opposition, portabilité : contact@seymr.fr. Réclamation possible auprès de la CNIL.</p>'},
+ cookies:{t:'Politique cookies',u:'Mise à jour : juin 2026',b:
+  '<h3>Principe</h3><p>Ce site limite les cookies au strict nécessaire à la navigation. Aucun traçage publicitaire, aucune revente de données.</p>'+
+  '<h3>Paiement</h3><p>Lors d\u2019un paiement, Stripe dépose ses propres cookies sur son domaine sécurisé, indispensables à la transaction.</p>'+
+  '<h3>Préférence</h3><p>Votre choix est conservé localement sur votre appareil. Vous pouvez l\u2019effacer en vidant les données du navigateur.</p>'}
+};
+function openLegal(k){
+  var x=LEGAL[k];if(!x)return;
+  document.getElementById('legalTitle').textContent=x.t;
+  document.getElementById('legalUpd').textContent=x.u;
+  document.getElementById('legalBody').innerHTML=x.b;
+  document.getElementById('legal').classList.add('o');document.body.classList.add('lock');
+}
+function closeLegal(){document.getElementById('legal').classList.remove('o');if(!document.getElementById('viewer').classList.contains('o'))document.body.classList.remove('lock');}
+document.getElementById('legalX').addEventListener('click',closeLegal);
+document.getElementById('legal').addEventListener('click',function(e){if(e.target===this)closeLegal();});
+
+render();initFilter();initFreq();initReveal();initCookie();
+
+/* VIDÉO HERO : autoplay robuste tous supports */
+(function(){
+  var vid=document.getElementById('heroVid');
+  var poster=document.querySelector('.hero-poster');
+  if(!vid)return;
+
+  function tryPlay(){
+    var p=vid.play();
+    if(p!==undefined){
+      p.then(function(){
+        // Vidéo lancée : masquer le poster img derrière la vidéo
+        if(poster)poster.style.opacity='0';
+      }).catch(function(){
+        // Autoplay bloqué (Power Saving, permissions) : le poster reste visible
+        if(poster)poster.style.opacity='1';
+      });
+    }
+  }
+
+  // Tenter dès que possible
+  if(vid.readyState>=2){tryPlay();}
+  else{vid.addEventListener('canplay',tryPlay,{once:true});}
+
+  // Fallback sur première interaction utilisateur (Smart TV, Low Power Mode iOS)
+  function onFirstInteraction(){
+    document.removeEventListener('touchstart',onFirstInteraction);
+    document.removeEventListener('click',onFirstInteraction);
+    document.removeEventListener('keydown',onFirstInteraction);
+    tryPlay();
+  }
+  document.addEventListener('touchstart',onFirstInteraction,{once:true,passive:true});
+  document.addEventListener('click',onFirstInteraction,{once:true});
+  document.addEventListener('keydown',onFirstInteraction,{once:true});
+
+  // Visibility API : relancer si l'onglet reprend le focus
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden&&vid.paused)tryPlay();
+  });
+})();
+
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('ld').classList.add('gone');},1500);});
+setTimeout(function(){document.getElementById('ld').classList.add('gone');},2600);
+</script>
+</body>
+</html>
